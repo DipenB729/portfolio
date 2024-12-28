@@ -1,6 +1,6 @@
 header{
-    height:100vh;
-    padding-top: 7rem;
+    height:110vh;
+    padding-top: 4rem;
     overflow:hidden;
 }
 .header__container{
@@ -32,21 +32,18 @@ header{
     background: var(--color-primary);
 }
 /************myself************/
-.me{
-    /* background: linear-gradient(var(--color-primary),transparent); */
-    width: 22rem;
-    height: 30rem;
-    position: absolute;
-    /* left:calc(50%-11rem); */
+.me {
+    width: 22rem;  /* Default size */
+    height: 30rem;  /* Default size */
     margin-top: 4rem;
-    border-radius: 11rem 11rem 0 0;
-    /* overflow: hidden; */
-    /* padding: 5rem 1.5rem 1.5rem 1.5rem; */
-    margin-left: 333px;
-}
-.me img{
-    border-radius: 11rem 11rem 0 0;   
-}
+    border-radius: 11rem 11rem 0 0;  /* Apply border radius directly to the image */
+    object-fit: cover;  /* Ensure the whole image is contained without cropping */
+    display: block;  /* Remove inline behavior, block-level element */
+    margin-left: auto;  /* Center align horizontally */
+    margin-right: auto;  /* Center align horizontally */
+    overflow: hidden;  /* Hide overflow to maintain the shape */
+  }
+
 
 /************Scroll Down************/
 
@@ -82,7 +79,7 @@ header{
     .me {
         width: 18rem;
         height: 24rem;
-    }
+      }
     
 }
 
