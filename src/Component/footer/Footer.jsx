@@ -19,7 +19,7 @@ const Footer=()=>{
       </ul>
       <div className="footer__socials">
         <a href="https://facebook.com" target='_blank'><FaFacebook /></a>
-        <a href="https://Instagram.com" target='_blank'><FaInstagram/></a>
+        <a href="https://www.instagram.com/dipen_belbase__/" target='_blank'><FaInstagram/></a>
         <a href="https://Twitter.com" target='_blank'><FaXTwitter /></a>
       </div>
      <div className="footer__copyright">
