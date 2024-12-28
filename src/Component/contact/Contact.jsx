@@ -9,21 +9,28 @@ const Contact=()=>{
   const form=useRef();
   const sendEmail = (e) => {
     e.preventDefault();
-
+  
+    console.log("Sending email with values:", {
+      name: form.current.name.value,
+      email: form.current.email.value,
+      message: form.current.message.value,
+    });
+  
     emailjs
-      .sendForm('service_kq9ujxi', 'template_w8ekkp4', form.current, {
-        publicKey: 'wJYt_9SXI0ek7cW2b',
-      })
-      e.target.reset()
+      .sendForm('service_kq9ujxi', 'template_w8ekkp4', form.current, 'wJYt_9SXI0ek7cW2b')
       .then(
-        () => {
-         alert('SUCCESS!');
+        (response) => {
+          console.log('Email sent successfully:', response);
+          alert('SUCCESS! Email has been sent.');
+          e.target.reset();
         },
         (error) => {
-          console.log('FAILED...', error.text);
-        },
+          console.error('Failed to send email:', error);
+          alert('FAILED to send email. Check console for details.');
+        }
       );
   };
+  
   return(
     <section id="contact">
       <h5>Get in Touch</h5>
@@ -51,11 +58,12 @@ const Contact=()=>{
         </div>
         {/* end of contact option */}
         <form ref={form} onSubmit={sendEmail}>
-          <input type="text" name='name' placeholder='Your Full Name' required />
-          <input type="email" name="email" id="" placeholder='Your Email'  required/>
-          <textarea name="messsage" id="" rows="7" placeholder='your message' required></textarea>
-          <button type='submit' className='btn btn-primary'> Send Message</button>
-        </form>
+         <input type="text" name="name" placeholder="Your Full Name" required />
+         <input type="email" name="email" placeholder="Your Email" required />
+         <textarea name="message" rows="7" placeholder="Your Message" required></textarea>
+         <button type="submit" className="btn btn-primary">Send Message</button>
+</form>
+
       </div>
 
     </section>
