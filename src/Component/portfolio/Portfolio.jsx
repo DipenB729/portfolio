@@ -25,7 +25,7 @@ const Portfolio=()=>{
           <div className="portfolio__item-image">
             <img src={img1} alt="project1" />
           </div>
-            <h3>To-Do List </h3>
+            <h3>News Portal </h3>
             <div className="portfolio__item-cta">
             <a href="https://github.com/DipenB729/News-portal" className='btn' target='_blank'>Github</a>
             <a href="https://news-portal-yb7o.vercel.app/" className='btn btn-primary' target='_blank'>Live Demo</a>
@@ -35,7 +35,7 @@ const Portfolio=()=>{
           <div className="portfolio__item-image">
             <img src={img2} alt="project1" />
           </div>
-            <h3>News Portal </h3>
+            <h3>To-do List </h3>
             <div className="portfolio__item-cta">
             <a href="https://github.com/DipenB729/To-Do_list" className='btn' target='_blank'>Github</a>
             <a href="https://to-do-list-kappa-drab.vercel.app/" className='btn btn-primary' target='_blank'>Live Demo</a>
